@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>(KuF) Diamant WEB</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</h:head>
+<h:body style="padding-top: 50px; padding-bottom: 20px;">
+	<h1 align="right">
+		Spedition u. Logistik Haaren<br />Keimeier &amp; Finke GmbH
+	</h1>
+	<h:form>
+		<b:tabView activeIndex="2"
+			contentStyle="border-right: 1px solid #ddd;border-left: 1px solid #ddd;border-top: 1px solid #ddd;padding:10px">
+			<b:tab title="Belege" disabled="true"></b:tab>
+			<b:tab title="Berichte"></b:tab>
+			<b:tab title="Finanzen">
+				<b:row>
+					<b:column span="2">
+						<b:panel title="Sachkonten">
+							<b:panelGrid columns="2">
+								<b:buttonGroup>
+									<b:button value="SachKonto"></b:button>
+								</b:buttonGroup>
+								<b:buttonGroup orientation="vertical" style="padding:1px">
+									<b:button value="Umsatzsteuer"></b:button>
+									<b:button value="Meldung"></b:button>
+									<b:button value="DauerFrist"></b:button>
+								</b:buttonGroup>
+							</b:panelGrid>
+						</b:panel>
+					</b:column>
+					<b:column span="3">
+						<b:panel title="Debitoren">
+							<b:panelGrid columns="2">
+								<b:buttonGroup>
+									<b:button value="Debitor"></b:button>
+								</b:buttonGroup>
+								<b:buttonGroup orientation="vertical">
+									<b:dropButton value="Mahnungen">
+										
+									</b:dropButton>
+									<b:button value="Lastschriften"></b:button>
+									<b:button value="Saldenbestätigungen"></b:button>
+									<b:commandButton value="test" action="#{hello.sayHello()}"></b:commandButton>
+								</b:buttonGroup>
+							</b:panelGrid>
+						</b:panel>
+					</b:column>
+				</b:row>
+			</b:tab>
+			<b:tab title="Kostenrechnung"></b:tab>
+			<b:tab title="Planung"></b:tab>
+			<b:tab title="Einstellungen" disabled="true">
+				<f:facet name="anchor">
+					<b:iconAwesome name="cog" spin="true" />
+				</f:facet>
+			</b:tab>
+			<b:tab title="Dienste" disabled="true"></b:tab>
+			<b:tab title="Portal" disabled="true"></b:tab>
+			<b:tab title="Hilfe" disabled="true"></b:tab>
+		</b:tabView>
+	</h:form>
+
+</h:body>
+
+</html>

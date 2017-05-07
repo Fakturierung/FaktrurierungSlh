@@ -1,0 +1,67 @@
+package entity.model.stage;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+/**
+ *
+ * @author ngj
+ */
+@Entity
+@Table(name = "tbl_stn_plz_ortsteil")
+public class PostleitzahlOrtsteil implements Serializable {
+
+	private static final long serialVersionUID = -1139693675736910224L;
+
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    private String land;
+    @ManyToOne
+    private Postleitzahl plz;
+    private String ortsBezeichnung;
+    
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getLand() {
+        return land;
+    }
+
+    public void setLand(String land) {
+        this.land = land;
+    }
+
+    public Postleitzahl getPlz() {
+        return plz;
+    }
+
+    public void setPlz(Postleitzahl plz) {
+        this.plz = plz;
+    }
+
+    public String getOrtsBezeichnung() {
+        return ortsBezeichnung;
+    }
+
+    public void setOrtsBezeichnung(String ortsBezeichnung) {
+        this.ortsBezeichnung = ortsBezeichnung;
+    }
+
+    @Override
+    public String toString() {
+        return "PostleitzahlOrtsteil{" + "id=" + id + ", land=" + land + ", plz=" + plz + ", ortsBezeichnung=" + ortsBezeichnung + '}';
+    }
+
+}
